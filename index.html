@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            display: grid;
+            place-content: center;
+            height: 100vh;
+            background-color: hsl(217, 54%, 11%);
+            font-family: 'Outfit', sans-serif;
+        }
+        
+        .container {
+            max-width: 375px;
+            border-radius: 16px;
+            padding: 16px;
+            background-color: hsl(216, 50%, 16%);
+        }
+        
+        .box {
+            width: 100%;
+            border-radius: 8px;
+            position: relative;
+            cursor: pointer;
+        }
+        
+        .box:hover .bgndcolor,
+        .box:hover :nth-child(3) {
+            display: block;
+        }
+        
+        .image {
+            width: 100%;
+            border-radius: 8px;
+        }
+        
+        .bgndcolor {
+            width: 100%;
+            height: 343px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: hsl(178, 100%, 50%);
+            opacity: 50%;
+            display: none;
+            border-radius: 8px;
+        }
+        
+        .box :nth-child(3) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+        
+        h1 {
+            color: hsl(0, 0%, 100%);
+            cursor: pointer;
+            margin: 16px 0;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        
+        h1:hover {
+            color: hsl(178, 100%, 50%);
+        }
+        
+        .container>p {
+            color: hsl(215, 51%, 70%);
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+        
+        .price {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            margin: 10px 0;
+            border-bottom: .5px solid hsl(215, 32%, 27%);
+        }
+        
+        .price div {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+        
+        h2 {
+            color: hsl(178, 100%, 50%);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .time {
+            color: hsl(215, 51%, 70%);
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .comment {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .comment img {
+            width: 30px;
+            height: 30px;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: hsl(0, 0%, 100%);
+        }
+        
+        .comment p {
+            color: hsl(215, 51%, 70%);
+        }
+        
+        .name {
+            cursor: pointer;
+            color: hsl(0, 0%, 100%);
+        }
+        
+        .name:hover {
+            color: hsl(178, 100%, 50%);
+        }
+        
+        .attribution {
+            position: absolute;
+            bottom: 0%;
+            padding: 10px;
+            width: 100%;
+            text-align: center;
+            color: hsl(0, 0%, 100%);
+            font-size: 10px;
+        }
+        
+        .attribution>a {
+            color: aqua;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img class="image" src="images/image-equilibrium.jpg" alt="img">
+            <div class="bgndcolor">
+            </div>
+            <img src="images/icon-view.svg" alt="">
+
+        </div>
+        <h1>Equilibrium #3429</h1>
+        <p>Our Equilibrium collection promotes balance and calm.</p>
+        <div class="price">
+            <div>
+                <img src="images/icon-ethereum.svg" alt="">
+                <h2>0.041ETH</h2>
+            </div>
+            <div>
+                <img src="images/icon-clock.svg" alt="">
+                <div class="time">3 days left</div>
+            </div>
+        </div>
+        <div class="comment">
+            <img src="images/image-avatar.png" alt="">
+            <p>Creation of <span class="name">Jules Wybern</span></p>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Pegu</a>.
+    </div>
+</body>
+
+</html>
